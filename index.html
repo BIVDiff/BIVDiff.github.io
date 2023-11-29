@@ -222,6 +222,7 @@
           <br>
 
           <h3 class="title">Video Inpainting</h3>
+          <h4 class="title">Stable Diffusion Inpainting (IDM) + VidRD (VDM)</h4>
           <table class="center">
             <tr><td></td><td></td><td></td><td></td></tr>
             <tr>
@@ -238,6 +239,7 @@
           <br>
 
           <h3 class="title">Video Outpainting</h3>
+          <h4 class="title">Stable Diffusion Inpainting (IDM) + VidRD (VDM)</h4>
           <table class="center">
             <tr><td></td><td></td><td></td><td></td></tr>
             <tr>
@@ -329,12 +331,12 @@
         
             </tr>
             <tr>
-              <td width=20% style="text-align:center;">Source Video</td>
-              <td width=20% style="text-align:center;">IDM</td>
-              <td width=20% style="text-align:center;">VDM</td>
-              <td width=20% style="text-align:center;">IDM_and_VDM_Alternate</td>
-              <td width=20% style="text-align:center;">IDM_and_VDM_Fuse</td>
-              <td width=20% style="text-align:center;">IDM and VDM Sequential (BIVDiff)</td>
+              <td width=16.6% style="text-align:center;">Source Video</td>
+              <td width=16.6% style="text-align:center;">IDM</td>
+              <td width=16.6% style="text-align:center;">VDM</td>
+              <td width=16.6% style="text-align:center;">IDM_and_VDM_Alternate</td>
+              <td width=16.6% style="text-align:center;">IDM_and_VDM_Fuse</td>
+              <td width=16.6% style="text-align:center;">IDM and VDM Sequential (BIVDiff)</td>
             </tr>
             
           </table>
@@ -354,21 +356,45 @@
         
             </tr>
             <tr>
-              <td width=20% style="text-align:center;">Source Video</td>
-              <td width=20% style="text-align:center;">Prompt2Prompt</td>
-              <td width=20% style="text-align:center;">BIVDiff (&alpha;=0)</td>
-              <td width=20% style="text-align:center;">BIVDiff (&alpha;=0.1)</td>
-              <td width=20% style="text-align:center;">BIVDiff (&alpha;=0.25)</td>
-              <td width=20% style="text-align:center;">BIVDiff (&alpha;=0.5)</td>
-              <td width=20% style="text-align:center;">BIVDiff (&alpha;=1.0)</td>
+              <td width=14.2% style="text-align:center;">Source Video</td>
+              <td width=14.2% style="text-align:center;">Prompt2Prompt</td>
+              <td width=14.2% style="text-align:center;">BIVDiff (&alpha;=0)</td>
+              <td width=14.2% style="text-align:center;">BIVDiff (&alpha;=0.1)</td>
+              <td width=14.2% style="text-align:center;">BIVDiff (&alpha;=0.25)</td>
+              <td width=14.2% style="text-align:center;">BIVDiff (&alpha;=0.5)</td>
+              <td width=14.2% style="text-align:center;">BIVDiff (&alpha;=1.0)</td>
             </tr>
             
           </table>
           <br>
+
+          <h3 class="title">Effects of Video Temporal Smoothing </h3>
+          <table class="center">
+            <tr><td></td><td></td><td></td><td></td></tr>
+            <tr>
+              <td><img src="./assets/showcase/inpainting/soccerball/source_video.gif" raw=true><img src="./assets/showcase/inpainting/soccerball/inpaint_video.gif"><img src="./assets/showcase/inpainting/soccerball/i2v_inverse_and_vdm.gif"></td>
+              <td><img src="./assets/results/VidRD/control/ControlNet/depth/mbike-trick/source_video.gif" raw=true><img src="./assets/results/VidRD/control/ControlNet/depth/mbike-trick/controlnet.gif"><img src="./assets/results/VidRD/control/ControlNet/depth/mbike-trick/controlnet_inverse_and_vdm.gif"></td>
+              <td><img src="./assets/results/VidRD/edit/InstructPix2Pix/stadium_background/source_video.gif" raw=true><img src="./assets/results/VidRD/edit/InstructPix2Pix/stadium_background/edit.gif"><img src="./assets/results/VidRD/edit/InstructPix2Pix/stadium_background/edit_inverse_and_vdm.gif"></td>
+              <td><img src="./assets/results/VidRD/edit/Prompt2Prompt/attention_refine/in_the_forest/source_video.gif" raw=true><img src="./assets/results/VidRD/edit/Prompt2Prompt/attention_refine/in_the_forest/p2p_edited_video.gif"><img src="./assets/results/VidRD/edit/Prompt2Prompt/attention_refine/in_the_forest/edit_inverse_and_vdm"></td>
+
+            </tr>
+            <tr>
+              <td width=25% style="text-align:center;">Video Inpainting with Stable Diffusion Inpainting</td>
+              <td width=25% style="text-align:center;">Controllable Video Generation with ControlNet</td>
+              <td width=25% style="text-align:center;">Video Editing with Insruct Pix2Pix</td>
+              <td width=25% style="text-align:center;">Video Editing with Prompt2Prompt</td>
+
+            </tr>
+            
+          </table>
+          <br>
+
             
           </div></div></section>
         </div>
       </section>
+
+      
 </body>
 
 <script>
