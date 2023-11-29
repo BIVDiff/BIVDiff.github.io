@@ -261,6 +261,7 @@
           <section class="hero method">
           <div class="container is-max-desktop">
           <div class="hero-body"> 
+          <h3 class="title">Controllable Video Generation</h3>
           <table class="center">
             <tr><td></td><td></td><td></td><td></td></tr>
             <tr>
@@ -281,7 +282,7 @@
             
           </table>
           <br>
-
+          <h3 class="title">Video Editing</h3>
           <table class="center">
             <tr><td></td><td></td><td></td><td></td></tr>
             <tr>
@@ -315,6 +316,55 @@
           <section class="hero method">
           <div class="container is-max-desktop">
           <div class="hero-body"> 
+          <h3 class="title">Framework Design</h3>
+          <table class="center">
+            <tr><td></td><td></td><td></td><td></td></tr>
+            <tr>
+              <td><img src="./assets/ablation/framework_design/mallard-water/source_video.gif" raw=true></td>
+              <td><img src="./assets/ablation/framework_design/mallard-water/idm.gif"></td>
+              <td><img src="./assets/ablation/framework_design/mallard-water/vdm.gif"></td>
+              <td><img src="./assets/ablation/framework_design/mallard-water/idm_and_vdm_alternate.gif"></td>
+              <td><img src="./assets/ablation/framework_design/mallard-water/idm_and_vdm_fuse.gif"></td>
+              <td><img src="./assets/ablation/framework_design/mallard-water/controlnet_inverse_and_vdm.gif"></td>
+        
+            </tr>
+            <tr>
+              <td width=20% style="text-align:center;">Source Video</td>
+              <td width=20% style="text-align:center;">IDM</td>
+              <td width=20% style="text-align:center;">VDM</td>
+              <td width=20% style="text-align:center;">IDM_and_VDM_Alternate</td>
+              <td width=20% style="text-align:center;">IDM_and_VDM_Fuse</td>
+              <td width=20% style="text-align:center;">IDM and VDM Sequential (BIVDiff)</td>
+            </tr>
+            
+          </table>
+          <br>
+
+          <h3 class="title">Mixing Ratio in Mixed Inversion </h3>
+          <table class="center">
+            <tr><td></td><td></td><td></td><td></td></tr>
+            <tr>
+              <td><img src="./assets/ablation/mixing_ratio/0/source_video.gif" raw=true></td>
+              <td><img src="./assets/ablation/mixing_ratio/0/p2p_edited_video.gif" raw=true></td>
+              <td><img src="./assets/ablation/mixing_ratio/0/edit_inverse_and_vdm.gif" raw=true></td>
+              <td><img src="./assets/ablation/mixing_ratio/0.1/edit_inverse_and_vdm.gif"></td>
+              <td><img src="./assets/ablation/mixing_ratio/0.25/edit_inverse_and_vdm.gif"></td>
+              <td><img src="./assets/ablation/mixing_ratio/0.5/edit_inverse_and_vdm.gif"></td>
+              <td><img src="./assets/ablation/mixing_ratio/1.0/edit_inverse_and_vdm.gif"></td>
+        
+            </tr>
+            <tr>
+              <td width=20% style="text-align:center;">Source Video</td>
+              <td width=20% style="text-align:center;">Prompt2Prompt</td>
+              <td width=20% style="text-align:center;">BIVDiff (&alpha;=0)</td>
+              <td width=20% style="text-align:center;">BIVDiff (&alpha;=0.1)</td>
+              <td width=20% style="text-align:center;">BIVDiff (&alpha;=0.25)</td>
+              <td width=20% style="text-align:center;">BIVDiff (&alpha;=0.5)</td>
+              <td width=20% style="text-align:center;">BIVDiff (&alpha;=1.0)</td>
+            </tr>
+            
+          </table>
+          <br>
             
           </div></div></section>
         </div>
