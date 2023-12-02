@@ -81,7 +81,6 @@ sup {
 
 .container {
 	width: 1080px;
-	min-height: 1080px;
 	max-height: 999999px; /* prevents font boosting */
 	margin: 0 auto; /* top and bottom, right and left */
 	/*	border: 1px solid #000; */
@@ -274,4 +273,8 @@ code {
 
 .teaser-img {
     width: 300px !important;
+}
+
+table tr td {
+    vertical-align:text-top;
 }
