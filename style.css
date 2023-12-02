@@ -278,3 +278,15 @@ code {
 table tr td {
     vertical-align:text-top;
 }
+
+.own-h2 {
+    font-size: 23px;
+}
+
+.own-h3 {
+    font-size: 20px;
+}
+
+.own-h4 {
+    font-size: 18px;
+}
