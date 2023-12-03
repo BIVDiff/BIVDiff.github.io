@@ -125,10 +125,8 @@
         <p class="section">&nbsp;</p>
 
         <p class="section">Results</p>
-
-
-          <p class="own-h2">Controllable Video Generation</p>
-          <p class="own-h3">ControlNet (IDM) + VidRD (VDM)</p>
+          <p class="subsection">(I) Controllable Video Generation</p>
+          <p class="subsubsection">ControlNet (IDM) + VidRD (VDM)</p>
           <table style="width: 80%; text-align: center;margin:auto">
             <tr><td></td><td></td><td></td><td></td></tr>
             <tr>
@@ -158,7 +156,7 @@
             <tr>
               <td width=33% style="text-align:center;">"A person on a motorcycle does a burnout on a frozen lake"</td>
               <td>&nbsp;</td>
-              <td width=33% style="text-align:center;">"A silver jeep car is moving on the winding forest road</td>
+              <td width=33% style="text-align:center;">"A silver jeep car is moving on the winding forest road"</td>
               <td>&nbsp;</td>
               <td width=33% style="text-align:center;">"An astronaut moonwalks on the moon"</td>
             </tr>
@@ -166,7 +164,7 @@
           </table>
           <br>
 
-          <p class="own-h3">T2I-Adapter (IDM) + VidRD (VDM)</p>
+          <p class="subsubsection">T2I-Adapter (IDM) + VidRD (VDM)</p>
           <table class="center">
             <tr><td></td><td></td><td></td><td></td></tr>
             <tr>
@@ -185,12 +183,12 @@
             <tr><td></td><td></td><td></td><td></td></tr>
             <tr>
               <td width=50% style="text-align:center;">"A red car moves in front of buildings"</td>
-              <td width=50% style="text-align:center;">"Iron Man moonwalks on the beach</td>
+              <td width=50% style="text-align:center;">"Iron Man moonwalks on the beach"</td>
             </tr>
           </table>
           <br>
 
-          <p class="own-h3">ControlNet (IDM) + ZeroScope (VDM)</p>
+          <p class="subsubsection">ControlNet (IDM) + ZeroScope (VDM)</p>
           <table style="width: 80%; text-align: center;margin:auto">
             <tr><td></td><td></td><td></td><td></td></tr>
             <tr>
@@ -228,10 +226,16 @@
           <br>
 
 
-          <p class="own-h3">Video Editing</p>
-          <p class="own-h4">Instruct Pix2Pix (IDM) + VidRD (VDM)</p>
+          <p class="subsection">(II) Video Editing</p>
+          <p class="subsubsection">Instruct Pix2Pix (IDM) + VidRD (VDM)</p>
           <table class="center">
             <tr><td></td><td></td><td></td><td></td></tr>
+            <tr>
+              <td width=25% style="text-align:center;font-size: 18px;"><b>Source Video</b></td>
+              <td width=25% style="text-align:center;font-size: 18px;"><b>Style Transfer</b></td>
+              <td width=25% style="text-align:center;font-size: 18px;"><b>Replace Object</b></td>
+              <td width=25% style="text-align:center;font-size: 18px;"><b>Replace Background</b></td>
+            </tr>
             <tr>
               <td><img style="width:100%" src="./assets/results/VidRD/edit/InstructPix2Pix/minecraft/source_video.gif" raw=true></td>
               <td><img style="width:100%" src="./assets/results/VidRD/edit/InstructPix2Pix/minecraft/edit_inverse_and_vdm.gif"></td>
@@ -249,12 +253,23 @@
           </table>
           <br>
 
-          <p class="own-h4">Prompt2Prompt (IDM) + VidRD (VDM)</p>
+          <p class="subsubsection">Prompt2Prompt (IDM) + VidRD (VDM)</p>
           <table class="center">
             <tr><td></td><td></td><td></td><td></td></tr>
             <tr>
+              <td width=20% style="text-align:center;font-size: 18px;"><b>Source Video</b></td>
+              <td>&nbsp;&nbsp;</td>
+              <td width=20% style="text-align:center;font-size: 18px;"><b>Attention Replace</b></td>
+              <td>&nbsp;&nbsp;</td>
+              <td width=20% style="text-align:center;"></td>
+              <td width=20% style="text-align:center;font-size: 18px;"><b>Attention Refine</b></td>
+              <td width=20% style="text-align:center;"></td>
+            </tr>
+            <tr>
               <td><img style="width:100%" src="./assets/results/VidRD/edit/Prompt2Prompt/attention_replace/car_to_bicycle/source_video.gif" raw=true></td>
+              <td>&nbsp;&nbsp;</td>
               <td><img style="width:100%" src="./assets/results/VidRD/edit/Prompt2Prompt/attention_replace/car_to_bicycle/edit_inverse_and_vdm.gif" raw=true></td>
+              <td>&nbsp;&nbsp;</td>
               <td><img style="width:100%" src="./assets/results/VidRD/edit/Prompt2Prompt/attention_refine/at_sunset/edit_inverse_and_vdm.gif"></td>
               <td><img style="width:100%" src="./assets/results/VidRD/edit/Prompt2Prompt/attention_refine/in_the_forest/edit_inverse_and_vdm.gif"></td>
               <td><img style="width:100%" src="./assets/results/VidRD/edit/Prompt2Prompt/attention_refine/white_car/edit_inverse_and_vdm.gif"></td>
@@ -262,16 +277,18 @@
             </tr>
             <tr>
               <td width=20% style="text-align:center;">"A car is moving on the road"</td>
-              <td width=20% style="text-align:center;">"A bicycle is moving on the road"</td>
-              <td width=20% style="text-align:center;">"A car is moving on the road at sunset</td>
-              <td width=20% style="text-align:center;">"A car is moving on the road in the forest"</td>
-              <td width=20% style="text-align:center;">"A white car is moving on the road"</td>
+              <td>&nbsp;&nbsp;</td>
+              <td width=20% style="text-align:center;">"A <del>car</del> <span style="color: red">bicycle</span> is moving on the road"</td>
+              <td>&nbsp;&nbsp;</td>
+              <td width=20% style="text-align:center;">"A car is moving on the road <span style="color: red">at sunset</span>"</td>
+              <td width=20% style="text-align:center;">"A car is moving on the road <span style="color: red">in the forest"</span></td>
+              <td width=20% style="text-align:center;">"A <span style="color: red">white</span> car is moving on the road"</td>
             </tr>
 
           </table>
           <br>
 
-          <p class="own-h4">Instruct Pix2Pix (IDM) + ZeroScope (VDM)</p>
+          <p class="subsubsection">Instruct Pix2Pix (IDM) + ZeroScope (VDM)</p>
           <table class="center">
             <tr><td></td><td></td><td></td><td></td></tr>
             <tr>
@@ -290,13 +307,13 @@
             <tr>
               <td width=50% style="text-align:center;">"Replace the man with a little boy"</td>
               <td>&nbsp;</td>
-              <td width=50% style="text-align:center;">"Make it minecraft style</td>
+              <td width=50% style="text-align:center;">"Make it minecraft style"</td>
             </tr>
           </table>
           <br>
 
-          <p class="own-h3">Video Inpainting</p>
-          <p class="own-h4">Stable Diffusion Inpainting (IDM) + VidRD (VDM)</p>
+          <p class="subsection">(III) Video Inpainting</p>
+          <p class="subsubsection">Stable Diffusion Inpainting (IDM) + VidRD (VDM)</p>
           <table style="width: 80%; text-align: center;margin:auto">
             <tr><td></td><td></td><td></td><td></td></tr>
             <tr>
@@ -310,7 +327,7 @@
           <table class="center">
             <tr><td></td><td></td><td></td><td></td></tr>
             <tr>
-              <td width=100% style="text-align:center;">""</td>
+              <td width=100% style="text-align:center;"><b>Erase Object:</b> ""</td>
             </tr>
           </table>
           <table style="width: 80%; text-align: center;margin:auto">
@@ -330,12 +347,12 @@
           <table class="center">
             <tr><td></td><td></td><td></td><td></td></tr>
             <tr>
-              <td width=100% style="text-align:center;">"A sports car is moving on the road"</td>
+              <td width=100% style="text-align:center;"><b>Replace Object:</b> "A sports car is moving on the road"</td>
             </tr>
           </table>
 
-          <p class="own-h3">Video Outpainting</p>
-          <p class="own-h4">Stable Diffusion Inpainting (IDM) + VidRD (VDM)</p>
+          <p class="subsection">(IV) Video Outpainting</p>
+          <p class="subsubsection">Stable Diffusion Inpainting (IDM) + VidRD (VDM)</p>
           <table style="width: 80%; text-align: center;margin:auto">
             <tr><td></td><td></td><td></td><td></td></tr>
             <tr>
@@ -349,169 +366,183 @@
           </table>
           <br>
 
+          <p class="section">Comparison</p>
+              <p class="subsection">(I) Controllable Video Generation</p>
+              <table class="center">
+                <tr><td></td><td></td><td></td><td></td></tr>
+                <tr>
+                  <td width=100% style="text-align:center;font-size: 20px;">"An army green jeep car is moving on the winding forest road"</td>
+                </tr>
+              <table class="center">
+                <tr><td></td><td></td><td></td><td></td></tr>
+                <tr>
+                  <td><img style="width:100%" src="./assets/comparison/control/car-turn/source_video.gif" raw=true></td>
+                  <td><img style="width:100%" src="./assets/comparison/control/car-turn/controlnet.gif"></td>
+                  <td><img style="width:100%" src="./assets/comparison/control/car-turn/text2video-zero.gif"></td>
+                  <td><img style="width:100%" src="./assets/comparison/control/car-turn/controlvideo.gif"></td>
+                  <td><img style="width:100%" src="./assets/comparison/control/car-turn/ours.gif"></td>
+    
+                </tr>
+                <tr>
+                  <td width=20% style="text-align:center;font-size: 20px;">Source Video</td>
+                  <td width=20% style="text-align:center;font-size: 20px;">ControlNet</td>
+                  <td width=20% style="text-align:center;font-size: 20px;">Text2Video-Zero</td>
+                  <td width=20% style="text-align:center;font-size: 20px;">ControlVideo</td>
+                  <td width=20% style="text-align:center;font-size: 20px;">BIVDiff (ours)</td>
+                </tr>
+    
+              </table>
+              <br>
+              <p class="subsection">(II) Video Editing</p>
+              <table class="center">
+                <tr><td></td><td></td><td></td><td></td></tr>
+                <tr>
+                  <td width=100% style="text-align:center;font-size: 20px;">"Replace the man with Spider Man"</td>
+                </tr>
+              </table>
+              <table class="center">
+                <tr><td></td><td></td><td></td><td></td></tr>
+                <tr>
+                  <td><img style="width:100%" src="./assets/comparison/edit/moonwalk/source_video.gif" raw=true></td>
+                  <td><img style="width:100%" src="./assets/comparison/edit/moonwalk/instruct_pix2pix.gif"></td>
+                  <td><img style="width:100%" src="./assets/comparison/edit/moonwalk/text2video-zero.gif"></td>
+                  <td><img style="width:100%" src="./assets/comparison/edit/moonwalk/tune-a-video.gif"></td>
+                  <td><img style="width:100%" src="./assets/comparison/edit/moonwalk/ours.gif"></td>
+    
+                </tr>
+                <tr>
+                  <td width=20% style="text-align:center;font-size: 20px;">Source Video</td>
+                  <td width=20% style="text-align:center;font-size: 20px;">InstructPix2Pix</td>
+                  <td width=20% style="text-align:center;font-size: 20px;">Text2Video-Zero</td>
+                  <td width=20% style="text-align:center;font-size: 20px;">Tune-A-Video</td>
+                  <td width=20% style="text-align:center;font-size: 20px;">BIVDiff (ours)</td>
+                </tr>
+    
+              </table>
+              <br>
+              <p class="section">Ablation</p>
+              <p class="subsection">(I) Framework Design</p>
+              <table class="center">
+                <tr><td></td><td></td><td></td><td></td></tr>
+                <tr>
+                  <td width=100% style="text-align:center;font-size: 20px;">"A striking mallard floats effortlessly on the sparkling pond"</td>
+                </tr>
+              </table>
+              <table class="center">
+                <tr><td></td><td></td><td></td><td></td></tr>
+                <tr>
+                  <td><img style="width:100%" src="./assets/ablation/framework_design/mallard-water/source_video.gif" raw=true></td>
+                  <td><img style="width:100%" src="./assets/ablation/framework_design/mallard-water/idm.gif"></td>
+                  <td><img style="width:100%" src="./assets/ablation/framework_design/mallard-water/vdm.gif"></td>
+                  <td><img style="width:100%" src="./assets/ablation/framework_design/mallard-water/idm_and_vdm_alternate.gif"></td>
+                  <td><img style="width:100%" src="./assets/ablation/framework_design/mallard-water/idm_and_vdm_fuse.gif"></td>
+                  <td><img style="width:100%" src="./assets/ablation/framework_design/mallard-water/controlnet_inverse_and_vdm.gif"></td>
+                </tr>
+                <tr>
+                  <td width=16.6% style="text-align:center;font-size: 18px;">Source Video</td>
+                  <td width=16.6% style="text-align:center;font-size: 18px;">IDM (ControlNet)</td>
+                  <td width=16.6% style="text-align:center;font-size: 18px;">VDM (VidRD)</td>
+                  <td width=16.6% style="text-align:center;font-size: 18px;">IDM and VDM Alternate</td>
+                  <td width=16.6% style="text-align:center;font-size: 18px;">IDM and VDM<br>Fuse</td>
+                  <td width=16.6% style="text-align:center;font-size: 18px;">IDM and VDM Sequential<br>(BIVDiff)</td>
+                </tr>
+    
+              </table>
+              <br>
+    
+              <p class="subsection">(II) Mixing Ratio in Mixed Inversion </p>
+              <table class="center">
+                <tr><td></td><td></td><td></td><td></td></tr>
+                <tr>
+                  <td width=100% style="text-align:center;font-size: 20px;">"A <del>car</del> <span style="color: red">bicycle</span> is moving on the road"</td>
+                </tr>
+              </table>
+              <table class="center">
+                <tr><td></td><td></td><td></td><td></td></tr>
+                <tr>
+                  <td><img style="width:100%" src="./assets/ablation/mixing_ratio/0/source_video.gif" raw=true></td>
+                  <td><img style="width:100%" src="./assets/ablation/mixing_ratio/0/p2p_edited_video.gif" raw=true></td>
+                  <td><img style="width:100%" src="./assets/ablation/mixing_ratio/0/edit_inverse_and_vdm.gif" raw=true></td>
+                  <td><img style="width:100%" src="./assets/ablation/mixing_ratio/0.1/edit_inverse_and_vdm.gif"></td>
+                  <td><img style="width:100%" src="./assets/ablation/mixing_ratio/0.25/edit_inverse_and_vdm.gif"></td>
+                  <td><img style="width:100%" src="./assets/ablation/mixing_ratio/0.5/edit_inverse_and_vdm.gif"></td>
+                  <td><img style="width:100%" src="./assets/ablation/mixing_ratio/1.0/edit_inverse_and_vdm.gif"></td>
+    
+                </tr>
+                <tr>
+                  <td width=14.2% style="text-align:center;font-size: 18px;">Source Video</td>
+                  <td width=14.2% style="text-align:center;font-size: 18px;">Prompt2Prompt</td>
+                  <td width=14.2% style="text-align:center;font-size: 18px;">BIVDiff (&alpha;=0)</td>
+                  <td width=14.2% style="text-align:center;font-size: 18px;">BIVDiff (&alpha;=0.1)</td>
+                  <td width=14.2% style="text-align:center;font-size: 18px;">BIVDiff (&alpha;=0.25)</td>
+                  <td width=14.2% style="text-align:center;font-size: 18px;">BIVDiff (&alpha;=0.5)</td>
+                  <td width=14.2% style="text-align:center;font-size: 18px;">BIVDiff (&alpha;=1.0)</td>
+                </tr>
+    
+              </table>
+              <br>
+    
+              <p class="subsection">(III) Effects of Video Temporal Smoothing </p>
+                      <table class="center">
+                          <tr><td></td><td></td><td></td><td></td></tr>
+    
+                          <tr>
+                            <td style="text-align: center; font-size: 20px;">Input</td>
+                              <td><img style="width:100%" src="./assets/showcase/inpainting/soccerball/source_video.gif" raw=true></td>
+                              <td>&thinsp;</td>
+                              <td><img style="width:100%" src="./assets/results/VidRD/control/ControlNet/depth/mbike-trick/source_video.gif" raw=true></td>
+                              <td>&thinsp;</td>
+                              <td><img style="width:100%" src="./assets/results/VidRD/edit/InstructPix2Pix/stadium_background/source_video.gif" raw=true></td>
+                              <td>&thinsp;</td>
+                              <td><img style="width:100%" src="./assets/results/VidRD/edit/Prompt2Prompt/attention_refine/in_the_forest/source_video.gif" raw=true></td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center; font-size: 20px;">IDM</td>
+                            <td><img style="width:100%" src="./assets/showcase/inpainting/soccerball/inpaint_video.gif"></td>
+                            <td>&thinsp;</td>
+                            <td><img style="width:100%" src="./assets/results/VidRD/control/ControlNet/depth/mbike-trick/controlnet.gif"> </td>
+                            <td>&thinsp;</td>
+                            <td><img style="width:100%" src="./assets/results/VidRD/edit/InstructPix2Pix/stadium_background/edit.gif"></td>
+                            <td>&thinsp;</td>
+                            <td><img style="width:100%" src="./assets/results/VidRD/edit/Prompt2Prompt/attention_refine/in_the_forest/p2p_edited_video.gif"></td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: center; font-size: 20px;">BIVDiff<br>(ours)</td>
+                          <td><img style="width:100%" src="./assets/showcase/inpainting/soccerball/i2v_inverse_and_vdm.gif"></td>
+                          <td>&thinsp;</td>
+                          <td><img style="width:100%" src="./assets/results/VidRD/control/ControlNet/depth/mbike-trick/controlnet_inverse_and_vdm.gif"></td>
+                          <td>&thinsp;</td>
+                          <td><img style="width:100%" src="./assets/results/VidRD/edit/InstructPix2Pix/stadium_background/edit_inverse_and_vdm.gif"></td>
+                          <td>&thinsp;</td>
+                          <td><img style="width:100%" src="./assets/results/VidRD/edit/Prompt2Prompt/attention_refine/in_the_forest/edit_inverse_and_vdm.gif"></td>
+                      </tr>
+    
+                          <tr>
+                              <td></td>
+                              <td width=25% style="text-align:center;font-size: 15px;">Video Inpainting<br>with Stable Diffusion Inpainting</td>
+                              <td>&thinsp;</td>
+                              <td width=25% style="text-align:center;font-size: 15px;">Controllable Video Generation<br>with ControlNet</td>
+                              <td>&thinsp;</td>
+                              <td width=25% style="text-align:center;font-size: 15px;">Video Editing<br>with Insruct Pix2Pix</td>
+                              <td>&thinsp;</td>
+                              <td width=25% style="text-align:center;font-size: 15px;">Video Editing<br>with Prompt2Prompt</td>
+    
+                          </tr>
+    
+                      </table>
+    
+    
+              </div></div></section>
+            </div>
+          </section>
+    
+    
+        
+
 
         </div></div></section>
         </div>
       </section>
-
-      <section class="section" id="Comparison">
-        <div class="container is-max-desktop content">
-          <p class="own-h2">Comparison</p>
-          <section class="hero method">
-          <div class="container is-max-desktop" style="padding-left:0">
-          <div class="hero-body">
-          <p class="own-h3">Controllable Video Generation</p>
-          <table class="center">
-            <tr><td></td><td></td><td></td><td></td></tr>
-            <tr>
-              <td><img style="width:100%" src="./assets/comparison/control/car-turn/source_video.gif" raw=true></td>
-              <td><img style="width:100%" src="./assets/comparison/control/car-turn/controlnet.gif"></td>
-              <td><img style="width:100%" src="./assets/comparison/control/car-turn/text2video-zero.gif"></td>
-              <td><img style="width:100%" src="./assets/comparison/control/car-turn/controlvideo.gif"></td>
-              <td><img style="width:100%" src="./assets/comparison/control/car-turn/ours.gif"></td>
-
-            </tr>
-            <tr>
-              <td width=20% style="text-align:center;font-size: 20px;">Source Video</td>
-              <td width=20% style="text-align:center;font-size: 20px;">ControlNet</td>
-              <td width=20% style="text-align:center;font-size: 20px;">Text2Video-Zero</td>
-              <td width=20% style="text-align:center;font-size: 20px;">ControlVideo</td>
-              <td width=20% style="text-align:center;font-size: 20px;">BIVDiff (ours)</td>
-            </tr>
-
-          </table>
-          <br>
-          <p class="own-h3">Video Editing</p>
-          <table class="center">
-            <tr><td></td><td></td><td></td><td></td></tr>
-            <tr>
-              <td><img style="width:100%" src="./assets/comparison/edit/moonwalk/source_video.gif" raw=true></td>
-              <td><img style="width:100%" src="./assets/comparison/edit/moonwalk/instruct_pix2pix.gif"></td>
-              <td><img style="width:100%" src="./assets/comparison/edit/moonwalk/text2video-zero.gif"></td>
-              <td><img style="width:100%" src="./assets/comparison/edit/moonwalk/tune-a-video.gif"></td>
-              <td><img style="width:100%" src="./assets/comparison/edit/moonwalk/ours.gif"></td>
-
-            </tr>
-            <tr>
-              <td width=20% style="text-align:center;font-size: 20px;">Source Video</td>
-              <td width=20% style="text-align:center;font-size: 20px;">InstructPix2Pix</td>
-              <td width=20% style="text-align:center;font-size: 20px;">Text2Video-Zero</td>
-              <td width=20% style="text-align:center;font-size: 20px;">Tune-A-Video</td>
-              <td width=20% style="text-align:center;font-size: 20px;">BIVDiff (ours)</td>
-            </tr>
-
-          </table>
-          <br>
-
-
-          </div></div></section>
-        </div>
-      </section>
-
-
-      <section class="section" id="Ablation">
-        <div class="container is-max-desktop content">
-          <p class="own-h2">Ablation</p>
-          <section class="hero method">
-          <div class="container is-max-desktop" style="padding-left:0">
-          <div class="hero-body">
-          <p class="own-h3">Framework Design</p>
-          <table class="center">
-            <tr><td></td><td></td><td></td><td></td></tr>
-            <tr>
-              <td><img style="width:100%" src="./assets/ablation/framework_design/mallard-water/source_video.gif" raw=true></td>
-              <td><img style="width:100%" src="./assets/ablation/framework_design/mallard-water/idm.gif"></td>
-              <td><img style="width:100%" src="./assets/ablation/framework_design/mallard-water/vdm.gif"></td>
-              <td><img style="width:100%" src="./assets/ablation/framework_design/mallard-water/idm_and_vdm_alternate.gif"></td>
-              <td><img style="width:100%" src="./assets/ablation/framework_design/mallard-water/idm_and_vdm_fuse.gif"></td>
-              <td><img style="width:100%" src="./assets/ablation/framework_design/mallard-water/controlnet_inverse_and_vdm.gif"></td>
-            </tr>
-            <tr>
-              <td width=16.6% style="text-align:center;font-size: 18px;">Source Video</td>
-              <td width=16.6% style="text-align:center;font-size: 18px;">IDM (ControlNet)</td>
-              <td width=16.6% style="text-align:center;font-size: 18px;">VDM (VidRD)</td>
-              <td width=16.6% style="text-align:center;font-size: 18px;">IDM and VDM Alternate</td>
-              <td width=16.6% style="text-align:center;font-size: 18px;">IDM and VDM<br>Fuse</td>
-              <td width=16.6% style="text-align:center;font-size: 18px;">IDM and VDM Sequential<br>(BIVDiff)</td>
-            </tr>
-
-          </table>
-          <br>
-
-          <p class="own-h3">Mixing Ratio in Mixed Inversion </p>
-          <table class="center">
-            <tr><td></td><td></td><td></td><td></td></tr>
-            <tr>
-              <td><img style="width:100%" src="./assets/ablation/mixing_ratio/0/source_video.gif" raw=true></td>
-              <td><img style="width:100%" src="./assets/ablation/mixing_ratio/0/p2p_edited_video.gif" raw=true></td>
-              <td><img style="width:100%" src="./assets/ablation/mixing_ratio/0/edit_inverse_and_vdm.gif" raw=true></td>
-              <td><img style="width:100%" src="./assets/ablation/mixing_ratio/0.1/edit_inverse_and_vdm.gif"></td>
-              <td><img style="width:100%" src="./assets/ablation/mixing_ratio/0.25/edit_inverse_and_vdm.gif"></td>
-              <td><img style="width:100%" src="./assets/ablation/mixing_ratio/0.5/edit_inverse_and_vdm.gif"></td>
-              <td><img style="width:100%" src="./assets/ablation/mixing_ratio/1.0/edit_inverse_and_vdm.gif"></td>
-
-            </tr>
-            <tr>
-              <td width=14.2% style="text-align:center;font-size: 18px;">Source Video</td>
-              <td width=14.2% style="text-align:center;font-size: 18px;">Prompt2Prompt</td>
-              <td width=14.2% style="text-align:center;font-size: 18px;">BIVDiff (&alpha;=0)</td>
-              <td width=14.2% style="text-align:center;font-size: 18px;">BIVDiff (&alpha;=0.1)</td>
-              <td width=14.2% style="text-align:center;font-size: 18px;">BIVDiff (&alpha;=0.25)</td>
-              <td width=14.2% style="text-align:center;font-size: 18px;">BIVDiff (&alpha;=0.5)</td>
-              <td width=14.2% style="text-align:center;font-size: 18px;">BIVDiff (&alpha;=1.0)</td>
-            </tr>
-
-          </table>
-          <br>
-
-          <p class="own-h3">Effects of Video Temporal Smoothing </p>
-                  <table class="center">
-                      <tr><td></td><td></td><td></td><td></td></tr>
-
-                      <tr>
-                        <td style="text-align: center;">Input</td>
-                          <td><img style="width:100%" src="./assets/showcase/inpainting/soccerball/source_video.gif" raw=true></td>
-                          <td>&thinsp;</td>
-                          <td><img style="width:100%" src="./assets/results/VidRD/control/ControlNet/depth/mbike-trick/source_video.gif" raw=true></td>
-                          <td>&thinsp;</td>
-                          <td><img style="width:100%" src="./assets/results/VidRD/edit/InstructPix2Pix/stadium_background/source_video.gif" raw=true></td>
-                          <td>&thinsp;</td>
-                          <td><img style="width:100%" src="./assets/results/VidRD/edit/Prompt2Prompt/attention_refine/in_the_forest/source_video.gif" raw=true></td>
-                      </tr>
-                      <tr>
-                        <td style="text-align: center;">IDM</td>
-                        <td><img style="width:100%" src="./assets/showcase/inpainting/soccerball/inpaint_video.gif"></td>
-                        <td>&thinsp;</td>
-                        <td><img style="width:100%" src="./assets/results/VidRD/control/ControlNet/depth/mbike-trick/controlnet.gif"> </td>
-                        <td>&thinsp;</td>
-                        <td><img style="width:100%" src="./assets/results/VidRD/edit/InstructPix2Pix/stadium_background/edit.gif"></td>
-                        <td>&thinsp;</td>
-                        <td><img style="width:100%" src="./assets/results/VidRD/edit/Prompt2Prompt/attention_refine/in_the_forest/p2p_edited_video.gif"></td>
-                    </tr>
-                    <tr>
-                      <td style="text-align: center;">BIVDiff<br>(ours)</td>
-                      <td><img style="width:100%" src="./assets/showcase/inpainting/soccerball/i2v_inverse_and_vdm.gif"></td>
-                      <td>&thinsp;</td>
-                      <td><img style="width:100%" src="./assets/results/VidRD/control/ControlNet/depth/mbike-trick/controlnet_inverse_and_vdm.gif"></td>
-                      <td>&thinsp;</td>
-                      <td><img style="width:100%" src="./assets/results/VidRD/edit/InstructPix2Pix/stadium_background/edit_inverse_and_vdm.gif"></td>
-                      <td>&thinsp;</td>
-                      <td><img style="width:100%" src="./assets/results/VidRD/edit/Prompt2Prompt/attention_refine/in_the_forest/edit_inverse_and_vdm.gif"></td>
-                  </tr>
-
-                      <tr>
-                          <td></td>
-                          <td width=25% style="text-align:center;font-size: 15px;">Video Inpainting<br>with Stable Diffusion Inpainting</td>
-                          <td>&thinsp;</td>
-                          <td width=25% style="text-align:center;font-size: 15px;">Controllable Video Generation<br>with ControlNet</td>
-                          <td>&thinsp;</td>
-                          <td width=25% style="text-align:center;font-size: 15px;">Video Editing<br>with Insruct Pix2Pix</td>
-                          <td>&thinsp;</td>
-                          <td width=25% style="text-align:center;font-size: 15px;">Video Editing<br>with Prompt2Prompt</td>
-
-                      </tr>
-
-                  </table>
 
     </div>
 
