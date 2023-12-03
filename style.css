@@ -115,7 +115,7 @@ sup {
 	line-height: 1.5em;
 	margin-left: auto;
     margin-right: auto;
-	max-width: 1360px;
+	max-width: 1280px;
 }
 
 table.affiliations {
@@ -157,7 +157,7 @@ table#video {
 }
 
 .section{
-	font-size: 150%;
+	font-size: 200%;
 	font-weight: 500;
 }
 
@@ -279,14 +279,14 @@ table tr td {
     vertical-align:text-top;
 }
 
-.own-h2 {
-    font-size: 23px;
+.subsection{
+	font-size: 150%;
+	font-weight: 500;
 }
 
-.own-h3 {
-    font-size: 20px;
-}
 
-.own-h4 {
-    font-size: 18px;
+.subsubsection{
+	font-size: 120%;
+	font-weight: 500;
+	text-align: center;
 }
